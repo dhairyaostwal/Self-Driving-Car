@@ -2,6 +2,10 @@ import matplotlib.pylab as plt
 import cv2
 import numpy as np
 
+def make_480p():
+    cap.set(3, 640)
+    cap.set(4, 480)
+
 def roi(img, vertices):
     mask = np.zeros_like(img)
     # channel_count = img.shape[2]
@@ -56,10 +60,19 @@ def process(image):
 # plt.imshow(imageWithLines)
 # plt.show()
 
-cap = cv2.VideoCapture('P1_example.mp4')
+def rescale_frame(frame, percent=75):
+    width = int(frame.shape[1] * percent/ 100)
+    height = int(frame.shape[0] * percent/ 100)
+    dim = (width, height)
+    return cv2.resize(frame, dim, interpolation =cv2.INTER_AREA)
+
+# cap = cv2.VideoCapture('P1_example.mp4')
+cap = cv2.VideoCapture('solidYellowLeft.mp4')
+
 while(cap.isOpened()):
     ret, frame = cap.read()
     frame = process(frame)
+    frame = rescale_frame(frame, percent=100)
     cv2.imshow('Output', frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
