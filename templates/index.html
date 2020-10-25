@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+        integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" type="text/css">
+    <title>Streaming of Lane Detection for Self Driving Cars</title>
+</head>
+
+<body>
+    <div class="dashboardBanner">Lane Detection for Self Driving Cars</div>
+    <section id="home-section">
+        <div class="text-center">
+            <img src="{{ url_for('video_feed') }}" width="800px" height="400px">
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+        <section id="footer-section">
+            <div class="container" style="text-align: justify;">
+                <center>
+                    <div class="row">
+                        <div class="col-sm mt-3 mb-1">
+                            <a style="color: #1C1C21;" href="#home-section">Back to top <i
+                                    class="fas fa-arrow-up"></i></a>
+                        </div>
+
+                        <div class="col-sm mt-3 mb-1">
+                            Made with <span style="color: red;">&hearts;</span> by <a style="color: #1C1C21;"
+                                href="https://github.com/dhairyaostwal">Dhairya Ostwal</a>
+                        </div>
+                        <div class="col-sm mt-2 mb-1">
+                            <a style="font-size: 30px; color: black;" class="fab fa-github icon-size mr-3 githubIcon"
+                                href="https://github.com/dhairyaostwal" height="20px" width="20px"></a>
+                            <a style="font-size: 30px; color: black;"
+                                class="fab fa-linkedin icon-size mr-3 linkedinIcon"
+                                href="https://www.linkedin.com/in/dhairyaostwal/" height="20px" width="20px"></a>
+                            <a style="font-size: 30px; color: black;" class="fab fa-instagram icon-size mr-3 instaIcon"
+                                href="https://instagram.com/dhairyaostwal/" height="20px" width="20px"></a>
+                            <a style="font-size: 30px; color: black;" class="fab fa-twitter icon-size mr-3 twitterIcon"
+                                href="https://twitter.com/dhairyaostwal/" height="20px" width="20px"></a>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </section>
+    </footer>
+</body>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+    integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
+    crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v5.13.1/js/all.js" data-auto-replace-svg="nest"></script>
+
+
+</html>

@@ -1,0 +1,128 @@
+/* 
+Color Scheme for website:
+
+4D0A06
+A54807
+DD9D46
+E7C799
+E1E6E1
+
+*/
+
+
+#home-section{
+    padding-left:10rem;
+    padding-right:10rem;
+    padding-top:5rem;
+    padding-bottom:5rem;
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-dark {
+    background-color: #d85f5f!important;
+}
+
+.mainHeading{
+    font-family: 'Poppins';
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.subHeading{
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.VITOffer{
+    font-family: 'Berkshire Swash';
+    font-size: 1.9rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #D85E5F;
+}
+
+#problemEarly{
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 3.5rem;
+    padding-bottom: 7rem;
+}
+
+.sectionHeading{
+    font-family: 'Poppins';
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.storyFont{
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+#features{
+    padding-left:10rem;
+    padding-right:10rem;
+    padding-top:5rem;
+    padding-bottom:7rem;
+    background: #A1FFCE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#footer-section{
+    background-color: #92fdc2;
+}
+
+.getStarted{
+    background-color: black;
+    color: white;
+    border:1px solid black;
+}
+
+.getStarted:hover{
+    background-color: black;
+    color: white;
+    border:1px solid black;
+}
+
+.dashboardBanner{
+    background-color: #d85f5f;
+    color: black;
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 3rem;
+    padding: .8rem;
+    margin-bottom: 2rem;
+}
+
+.dashboardBG{
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.dashboardCard{
+    background-color: white;
+    padding: 2rem;
+}
+
+.inputCustom{
+    margin-bottom: .5rem;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+}
+
+.capacityCount{
+    font-family: 'Poppins';
+    font-size: 2rem;
+}

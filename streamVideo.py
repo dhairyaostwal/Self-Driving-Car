@@ -1,13 +1,16 @@
 import matplotlib.pylab as plt
 import cv2
 import numpy as np
+import time
+from flask import Flask, render_template, Response
 
+app = Flask(__name__)
 
-# scaling frame to 480p
+@app.route('/')
+def index():
+    # Video streaming home page.
+    return render_template('index.html')
 
-def make_480p():
-    cap.set(3, 640)
-    cap.set(4, 480)
 
 # generating region of interest
 
@@ -53,6 +56,7 @@ def process(image):
         (width, height)
     ]
 
+
     gray_cropped_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     cannyImage = cv2.Canny(gray_cropped_image, 100, 120)
     cropped_image = roi(cannyImage, np.array([region_of_interest_vertices], np.int32))
@@ -81,15 +85,47 @@ def rescale_frame(frame, percent=75):
     dim = (width, height)
     return cv2.resize(frame, dim, interpolation =cv2.INTER_AREA)
 
-cap = cv2.VideoCapture('P1_example.mp4')
+# cap.release()
+# cv2.destroyAllWindows()
 
-while(cap.isOpened()):
-    ret, frame = cap.read()
-    frame = process(frame)
-    frame = rescale_frame(frame, percent=100)
-    cv2.imshow('Output', frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+app = Flask(__name__)
 
-cap.release()
-cv2.destroyAllWindows()
+@app.route('/')
+def index():
+    """Video streaming home page."""
+    return render_template('index.html')
+
+
+def gen():
+    """Video streaming generator function."""
+    cap = cv2.VideoCapture('P1_example.mp4')
+
+    # Read until video is completed
+    while(cap.isOpened()):
+        ret, frame = cap.read()  # import image
+        if not ret: #if vid finish repeat
+            frame = cv2.VideoCapture("P1_example.mp4")
+            continue
+        if ret:  # if there is a frame continue with code
+            frame = process(frame)
+            frame = rescale_frame(frame, percent=100)
+            image = cv2.resize(frame, (0, 0), None, 1, 1)  # resize image
+            
+        frame = cv2.imencode('.jpg', image)[1].tobytes()
+        yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+        #time.sleep(0.1)
+        key = cv2.waitKey(20)
+        if key == 27:
+           break
+   
+        
+
+@app.route('/video_feed')
+def video_feed():
+    """Video streaming route. Put this in the src attribute of an img tag."""
+    return Response(gen(),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
