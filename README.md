@@ -4,9 +4,9 @@
 
 Quick note:
 
-Running `python3 detector.py ` in terminal would show the video output
+Running **`python3 detector.py`** in terminal would show the video output
 
-Running `python3 streamVideo.py ` in terminal would show the stream output on localhost 5000 address generated
+Running **`python3 streamVideo.py`** in terminal would show the stream output on localhost 5000 address generated
 
 ```
 
