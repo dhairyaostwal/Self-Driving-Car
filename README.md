@@ -1,5 +1,21 @@
 # Self Driving Car Lane Detection
 
+## Steps to run the project
+
+Quick note:
+
+Running `python3 detector.py ` in terminal would show the video output
+Running `python3 streamVideo.py ` in terminal would show the stream output on localhost 5000 address generated
+
+```
+
+1. Clone the project
+2. Open the project inside terminal
+3. Inside terminal type python3 detector.py
+4. Inside terminal type python3 streamVideo.py
+
+```
+
 ## Transformations & Techniques used
 
 ### ✅Hough Transformation
