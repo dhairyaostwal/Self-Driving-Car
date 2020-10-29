@@ -8,7 +8,7 @@ Running **`python3 detector.py`** in terminal would show the video output
 
 Running **`python3 streamVideo.py`** in terminal would show the stream output on localhost 5000 address generated
 
-[Jump to Output](https://github.com/dhairyaostwal/Self-Driving-Car#output)
+[Jump to Output](https://github.com/dhairyaostwal/Self-Driving-Car#-output)
 
 ```
 
@@ -64,4 +64,4 @@ Finally upon masking,
  
 ![Lane Detection Output](OutputImage.png)
 
-![Streaming on localhost 5000]()
+![Streaming on localhost 5000](StreamOutput.png)
