@@ -8,6 +8,8 @@ Running **`python3 detector.py`** in terminal would show the video output
 
 Running **`python3 streamVideo.py`** in terminal would show the stream output on localhost 5000 address generated
 
+[Jump to Output](https://github.com/dhairyaostwal/Self-Driving-Car#output)
+
 ```
 
 1. Clone the project
@@ -40,7 +42,7 @@ As you can see finite lines. Now let's apply on our Road Image :
 
 ![PHoughTransform](./OutputImg/OutputOnRoad.png)
 
-### ✅Building out Region of Interest aka ROI
+### ✅ Building out Region of Interest aka ROI
 
 ![Masked Image](./OutputImg/MaskedImage.png)
 
@@ -58,6 +60,8 @@ Finally upon masking,
  
  **Video Dataset**: [Click here](https://www.youtube.com/playlist?list=PLPuW_E3R2ZUltRVlWuM3ngtL3jvScTj-Y)
 
- **Output image**: 
+ ### ✅ Output 
  
- ![Lane Detection Output](OutputImage.png)
+![Lane Detection Output](OutputImage.png)
+
+![Streaming on localhost 5000]()
